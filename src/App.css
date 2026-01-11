@@ -1,0 +1,165 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #262b31;
+}
+
+.app-header {
+  padding: 0.5rem 1rem;
+  /* background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); */
+  color: white;
+  text-align: left;
+}
+
+.app-title {
+  display: inline;
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Splash', cursive;
+}
+
+.app-subtitle {
+  margin-left: 1rem;
+  display: inline;
+  margin: 0.25rem 0 0 0;
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #b8bdc4;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+.footer-link {
+  color: #6ba4ff;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #8bb8ff;
+  text-decoration: underline;
+}
+
+.disclaimer-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1a2332 0%, #2d3748 100%);
+  color: #e8e9eb;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid #d3ca54;
+  z-index: 1000;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.banner-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #e8e9eb;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.banner-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #d3ca54;
+}
+
+.banner-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #d3ca54;
+}
+.beta-text {
+  font-weight: bold;
+  color: #ffcc00;
+} 
+
+.banner-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d6d9df;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-banner {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  
+  .banner-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .banner-title {
+    font-size: 1rem;
+    padding-right: 2rem;
+  }
+  
+  .banner-text {
+    font-size: 0.85rem;
+  }
+
+  .app-header {
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+  }
+  
+  .app-title {
+    letter-spacing: 0.5px;
+    display: block;
+  }
+  .app-subtitle {
+    display: block;
+    margin:  0.4rem 0 0 0 ;
+
+}
+
+  .app-footer {
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}

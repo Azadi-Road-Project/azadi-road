@@ -1,0 +1,30 @@
+.verification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #d3ca54;
+  color: #3a370c;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: normal;
+  cursor: help;
+  transition: background-color 0.2s;
+}
+
+.verification-badge:hover {
+  background-color: #ffb300;
+}
+
+/* Hide explanation text on desktop (tooltip works) */
+.badge-explanation {
+  display: none;
+}
+
+/* Show explanation text on mobile (no hover support) */
+@media (max-width: 768px) {
+  .badge-explanation {
+    display: inline;
+  }
+}
