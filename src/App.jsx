@@ -20,9 +20,10 @@ function App() {
       <div className="app">
         <header className="app-header">
           <h1 className="app-title">Azadi Road</h1>
-          <h3 className="app-subtitle">In Memory of the Fallen memorials of Freedom</h3>
+          <p className="app-subtitle">In Memory of the Fallen memorials of Freedom</p>
         </header>
 
+        <main>
         <Routes>
           <Route path="/year/:year" element={
             <>
@@ -38,8 +39,9 @@ function App() {
           } />
           <Route path="/" element={<Navigate to={`/year/${latestYear}`} replace />} />
         </Routes>
+        </main>
         
-        <footer className="app-footer">
+        <footer className="app-footer" role="contentinfo">
           <p>
             Built with ❤️ for freedom fighters | 
             <a 

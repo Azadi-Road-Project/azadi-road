@@ -38,16 +38,7 @@ const PersonProfile = () => {
     return <Navigate to={`/memorial/${memorials[0].id}`} replace />;
   }
 
-  // Initialize image source when person changes
-  useEffect(() => {
-    setImageSrc(getImagePath(person));
-  }, [person]);
-
-  // Handle image load error
-  const handleImageError = () => {
-    setImageSrc(getPlaceholderImage(person));
-  };
-
+  // Calculate age helper function
   const calculateAge = (person) => {
     if (person.born_at && person.died_at) {
       // Parse dates - supports both DD-MM-YYYY and YYYY-MM-DD formats
@@ -79,16 +70,6 @@ const PersonProfile = () => {
 
   const age = calculateAge(person);
 
-  // Get links as an array (supports both single link and array of links)
-  const getLinks = (person) => {
-    if (!person.links && !person.link) return [];
-    if (person.links && Array.isArray(person.links)) return person.links;
-    if (person.link) return [person.link];
-    return [];
-  };
-
-  const links = getLinks(person);
-
   // Get location string (city and/or province)
   const getLocation = (person) => {
     const parts = [];
@@ -98,6 +79,126 @@ const PersonProfile = () => {
   };
 
   const location = getLocation(person);
+
+  // Initialize image source when person changes
+  useEffect(() => {
+    setImageSrc(getImagePath(person));
+  }, [person]);
+
+  // Update meta tags and structured data for SEO and social sharing
+  useEffect(() => {
+    const baseUrl = window.location.origin;
+    const currentUrl = window.location.href;
+    const personImageUrl = `${baseUrl}${getImagePath(person)}`;
+    
+    // Store original values
+    const originalTitle = document.title;
+    const originalDescription = document.querySelector('meta[name="description"]')?.content;
+    
+    // Update document title
+    document.title = `${person.name} - Azadi Road Memorial | راه آزادی`;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.content = `In memory of ${person.name}, age ${age}. ${person.causeOfDeath}. ${person.description}`;
+    }
+    
+    // Update Open Graph tags
+    const updateMetaTag = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (tag) {
+        tag.content = content;
+      }
+    };
+    
+    updateMetaTag('og:title', `${person.name} - Azadi Road Memorial`);
+    updateMetaTag('og:description', `In memory of ${person.name}, age ${age}. ${person.causeOfDeath}.`);
+    updateMetaTag('og:url', currentUrl);
+    updateMetaTag('og:image', personImageUrl);
+    
+    updateMetaTag('twitter:title', `${person.name} - Azadi Road Memorial`);
+    updateMetaTag('twitter:description', `In memory of ${person.name}, age ${age}. ${person.causeOfDeath}.`);
+    updateMetaTag('twitter:url', currentUrl);
+    updateMetaTag('twitter:image', personImageUrl);
+    
+    // Add canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.href = currentUrl;
+    
+    // Add Person structured data (JSON-LD)
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": person.name,
+      "deathDate": person.died_at,
+      "birthDate": person.born_at,
+      "deathPlace": location || undefined,
+      "image": personImageUrl,
+      "description": person.description,
+      "memorialOf": {
+        "@type": "Event",
+        "name": person.causeOfDeath,
+        "description": `${person.name} lost their life during ${person.causeOfDeath}`
+      }
+    };
+    
+    // Remove undefined fields
+    Object.keys(structuredData).forEach(key => 
+      structuredData[key] === undefined && delete structuredData[key]
+    );
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'person-structured-data';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+    
+    // Cleanup: restore original values when component unmounts
+    return () => {
+      document.title = originalTitle;
+      if (metaDescription && originalDescription) {
+        metaDescription.content = originalDescription;
+      }
+      
+      // Reset to default values
+      updateMetaTag('og:title', 'Azadi Road - In Memory of Iran\'s Freedom Fighters | راه آزادی');
+      updateMetaTag('og:description', 'A digital memorial honoring those who lost their lives fighting for freedom in Iran. An interactive timeline documenting the faces and stories of freedom fighters.');
+      updateMetaTag('og:url', baseUrl);
+      updateMetaTag('og:image', `${baseUrl}/images/og-image.jpg`);
+      
+      updateMetaTag('twitter:title', 'Azadi Road - In Memory of Iran\'s Freedom Fighters | راه آزادی');
+      updateMetaTag('twitter:description', 'A digital memorial honoring those who lost their lives fighting for freedom in Iran. An interactive timeline documenting the faces and stories of freedom fighters.');
+      updateMetaTag('twitter:url', baseUrl);
+      updateMetaTag('twitter:image', `${baseUrl}/images/og-image.jpg`);
+      
+      // Remove structured data script
+      const structuredDataScript = document.getElementById('person-structured-data');
+      if (structuredDataScript) {
+        structuredDataScript.remove();
+      }
+    };
+  }, [person, age, location]);
+
+  // Handle image load error
+  const handleImageError = () => {
+    setImageSrc(getPlaceholderImage(person));
+  };
+
+  // Get links as an array (supports both single link and array of links)
+  const getLinks = (person) => {
+    if (!person.links && !person.link) return [];
+    if (person.links && Array.isArray(person.links)) return person.links;
+    if (person.link) return [person.link];
+    return [];
+  };
+
+  const links = getLinks(person);
 
   // Format death date if exists
   const formatDeathDate = (person) => {
@@ -169,8 +270,8 @@ const PersonProfile = () => {
   const year = getYear(person);
 
   return (
-    <div className="person-profile">
-      <div className="breadcrumb">
+    <article className="person-profile" itemScope itemType="https://schema.org/Person">
+      <nav className="breadcrumb" aria-label="Breadcrumb">
         <span className="breadcrumb-link" onClick={() => navigate('/')}>Homepage</span>
         {year && (
           <>
@@ -179,38 +280,42 @@ const PersonProfile = () => {
           </>
         )}
         <span className="breadcrumb-separator"> &gt; </span>
-        <span className="breadcrumb-current">{person.name}</span>
-      </div>
+        <span className="breadcrumb-current" itemProp="name">{person.name}</span>
+      </nav>
       
       <button className="nav-arrow nav-arrow-left" onClick={goToPrevious} aria-label="Previous person">
         ‹
       </button>
       
       <div className="profile-content">
-        <div className="profile-image-container">
+        <figure className="profile-image-container">
           <img 
             src={imageSrc} 
-            alt={person.name}
+            alt={`Portrait photograph of ${person.name}, remembered for their sacrifice during ${person.causeOfDeath}`}
             className="profile-image"
             onError={handleImageError}
+            itemProp="image"
+            width="300"
+            height="400"
+            loading="eager"
           />
-        </div>
+        </figure>
         
         <div className="profile-details">
           <VerificationBadge verified={person.verified} />
-          <h2 className="profile-name">
+          <h1 className="profile-name" itemProp="name">
             {person.name}
-          </h2>
+          </h1>
 
           <p className="profile-cause">
-            {person.causeOfDeath}
-            {deathDate && <span className="death-date"> ({deathDate})</span>}
+            <span itemProp="deathCause">{person.causeOfDeath}</span>
+            {deathDate && <time className="death-date" dateTime={person.died_at} itemProp="deathDate"> ({deathDate})</time>}
           </p>
           <p className="profile-age">
-            Age: {age}
-            {location && <span className="profile-location"> • {location}</span>}
+            <span itemProp="age">Age: {age}</span>
+            {location && <address className="profile-location" itemProp="deathPlace"> • {location}</address>}
           </p>
-          <p className="profile-description">{person.description}</p>
+          <p className="profile-description" itemProp="description">{person.description}</p>
           
           {links.length > 0 && (
             <div className="profile-links">
@@ -236,7 +341,7 @@ const PersonProfile = () => {
       <button className="nav-arrow nav-arrow-right" onClick={goToNext} aria-label="Next person">
         ›
       </button>
-    </div>
+    </article>
   );
 };
 
