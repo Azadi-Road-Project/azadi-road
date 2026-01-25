@@ -8,7 +8,7 @@ born_at: "2002"
 died_at: "2026-01-08"
 city: "Kermanshah"
 province: "Kermanshah"
-verified: false
+reviewed: false
 links:
   - url: https://fa.wikipedia.org/wiki/کشته‌شدگان_اعتراضات_دی_۱۴۰۴_ایران
     label: "Wikipedia (FA)"

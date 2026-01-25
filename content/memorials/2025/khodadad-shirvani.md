@@ -8,7 +8,7 @@ born_at: "1992-06-05"
 died_at: "2025-12-31"
 city: "Marvdasht"
 province: "Shiraz"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Killing_of_Khodadad_Shirvani
     label: "Wikipedia"

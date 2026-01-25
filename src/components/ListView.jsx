@@ -47,7 +47,7 @@ const PersonCard = ({ person, onPersonClick, formatDate, getAge }) => {
       </div>
       
       <div className="card-content">
-        <VerificationBadge verified={person.verified} />
+        <VerificationBadge reviewed={person.reviewed} />
         <h2 className="card-name" itemProp="name">{person.name}</h2>
         
         <dl className="card-details">

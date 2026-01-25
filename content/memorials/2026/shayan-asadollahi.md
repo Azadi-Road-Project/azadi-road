@@ -8,7 +8,7 @@ born_at: "1997"
 died_at: "2026-01-01"
 city: "Azna"
 province: "Lorestan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Killing_of_Shayan_Asadollahi
     label: "Wikipedia"

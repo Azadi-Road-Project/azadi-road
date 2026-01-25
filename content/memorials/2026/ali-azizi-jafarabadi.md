@@ -8,7 +8,7 @@ born_at: "1983-02"
 died_at: "2026-01-02"
 city: "Delfan"
 province: "Lorestan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_2025%E2%80%932026_Iranian_protests
     label: "Wikipedia"

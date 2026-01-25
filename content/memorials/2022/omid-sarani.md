@@ -8,7 +8,7 @@ born_at: "2009"
 died_at: "2022-09-30"
 city: "Zahedan"
 province: "Sistan and Baluchestan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_Mahsa_Amini_protests
     label: "Wikipedia"

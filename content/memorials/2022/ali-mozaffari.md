@@ -8,7 +8,7 @@ born_at: "2005"
 died_at: "2022-09-21"
 city: "Ghouchan"
 province: "Razavi Khorasan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_Mahsa_Amini_protests
     label: "Wikipedia"

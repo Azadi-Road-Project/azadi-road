@@ -8,7 +8,7 @@ born_at: "Unknown"
 died_at: "2026-01-07"
 city: "Tehran"
 province: "Tehran"
-verified: false
+reviewed: false
 links:
   - url: https://fa.wikipedia.org/wiki/کشته‌شدگان_اعتراضات_دی_۱۴۰۴_ایران
     label: "Wikipedia (FA)"
