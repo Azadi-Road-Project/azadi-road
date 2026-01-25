@@ -1,6 +1,7 @@
 ---
 id: "amirhesam-khodayarifard"
 name: "Amirhesam Khodayarifard"
+name-fa: ""
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"
@@ -8,7 +9,7 @@ born_at: "2003-06-19"
 died_at: "2025-12-31"
 city: "Kuhdasht"
 province: "Lorestan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Killing_of_Amirhesam_Khodayarifard
     label: "Wikipedia"

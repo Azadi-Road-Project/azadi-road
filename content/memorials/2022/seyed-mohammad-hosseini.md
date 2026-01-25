@@ -1,6 +1,7 @@
 ---
 id: "seyed-mohammad-hosseini"
 name: "Seyed Mohammad Hosseini"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Intentionally hit by security vehicle"
@@ -8,7 +9,7 @@ born_at: "Unknown"
 died_at: "2022-10-12"
 city: "Saqqez"
 province: "Kurdistan"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_Mahsa_Amini_protests
     label: "Wikipedia"

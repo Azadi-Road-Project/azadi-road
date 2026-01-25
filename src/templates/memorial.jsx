@@ -180,7 +180,7 @@ const MemorialTemplate = ({ data, pageContext }) => {
           </figure>
           
           <div className="profile-details">
-            <VerificationBadge verified={person.verified} />
+            <VerificationBadge reviewed={person.reviewed} />
             <h1 className="profile-name" itemProp="name">
               {person.name}
             </h1>
@@ -242,7 +242,7 @@ export const query = graphql`
         died_at
         city
         province
-        verified
+        reviewed
         links {
           url
           label

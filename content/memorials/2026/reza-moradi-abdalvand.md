@@ -1,6 +1,7 @@
 ---
 id: "reza-moradi-abdalvand"
 name: "Reza Moradi Abdalvand"
+name-fa: "رضا مرادی عبدالوند"
 sex: "male"
 age: "18"
 causeOfDeath: "Direct gunfire by security forces"
@@ -8,7 +9,7 @@ born_at: "2007"
 died_at: "2026-01-05"
 city: "Azna"
 province: "Lorestan"
-verified: true
+reviewed: true
 links:
   - url: "https://en.wikipedia.org/wiki/Deaths_during_the_2025%E2%80%932026_Iranian_protests"
     label: "Wikipedia"

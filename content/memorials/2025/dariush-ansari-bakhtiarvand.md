@@ -1,6 +1,7 @@
 ---
 id: "dariush-ansari-bakhtiarvand"
 name: "Dariush Ansari Bakhtiarvand"
+name-fa: ""
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"
@@ -8,7 +9,7 @@ born_at: "1998"
 died_at: "2025-12-31"
 city: "Fooladshahr"
 province: "Isfahan"
-verified: false
+reviewed: false
 links:
   - url: https://www.iranintl.com/en/202601014708
     label: "Iran International"

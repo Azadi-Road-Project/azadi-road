@@ -1,6 +1,7 @@
 ---
 id: "ghazaleh-chalabi-2"
 name: "Ghazaleh Chalabi"
+name-fa: ""
 sex: "female"
 age: "33"
 causeOfDeath: "Direct shot to the head"
@@ -8,7 +9,7 @@ born_at: "1989"
 died_at: "2022-09-21"
 city: "Amol"
 province: "Mazandaran"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_Mahsa_Amini_protests
     label: "Wikipedia"

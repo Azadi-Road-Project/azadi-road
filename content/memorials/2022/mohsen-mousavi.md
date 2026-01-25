@@ -1,13 +1,14 @@
 ---
 id: "mohsen-mousavi"
 name: "Mohsen Mousavi"
+name-fa: ""
 sex: "male"
 age: "32"
 causeOfDeath: "Direct shot to the head"
 died_at: "2022-10-08"
 city: "Tehran"
 province: "Tehran"
-verified: false
+reviewed: false
 links:
   - url: https://en.wikipedia.org/wiki/Deaths_during_the_Mahsa_Amini_protests
     label: "Wikipedia"

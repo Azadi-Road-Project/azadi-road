@@ -58,7 +58,7 @@ export const query = graphql`
           died_at
           city
           province
-          verified
+          reviewed
           links {
             url
             label

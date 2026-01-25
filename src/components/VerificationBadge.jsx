@@ -1,8 +1,8 @@
 import React from 'react';
 import './VerificationBadge.css';
 
-const VerificationBadge = ({ verified = false }) => {
-  if (verified === true) {
+const VerificationBadge = ({ reviewed = false }) => {
+  if (reviewed === true) {
     return null;
   }
 
