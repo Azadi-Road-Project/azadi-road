@@ -3,7 +3,7 @@ id: "omid-sarani"
 name: "Omid Sarani"
 sex: "male"
 age: "13"
-causeOfDeath: "Direct gunfire (Military-grade ammunition)
+causeOfDeath: "Direct gunfire (Military-grade ammunition)"
 born_at: "2009"
 died_at: "2022-09-30"
 city: "Zahedan"
