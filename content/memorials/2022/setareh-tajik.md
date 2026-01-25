@@ -1,6 +1,7 @@
 ---
 id: "setareh-tajik"
 name: "Setareh Tajik"
+name-fa: ""
 sex: "female"
 age: "17"
 causeOfDeath: "Severe beatings with batons"

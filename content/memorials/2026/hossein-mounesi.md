@@ -1,6 +1,7 @@
 ---
 id: "hossein-mounesi"
 name: "Hossein Mounesi"
+name-fa: "حسین مونسی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

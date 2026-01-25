@@ -1,6 +1,7 @@
 ---
 id: "siavash-mahmoudi"
 name: "Siavash Mahmoudi"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Direct shot to the head"

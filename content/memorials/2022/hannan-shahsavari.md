@@ -1,6 +1,7 @@
 ---
 id: "hannan-shahsavari-2"
 name: "Hannan Shahsavari"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

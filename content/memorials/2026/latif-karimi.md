@@ -1,6 +1,7 @@
 ---
 id: "latif-karimi"
 name: "Latif Karimi"
+name-fa: "لطیف کریمی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

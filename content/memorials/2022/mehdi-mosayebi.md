@@ -1,6 +1,7 @@
 ---
 id: "mehdi-mosayebi"
 name: "Mehdi Mosayebi"
+name-fa: ""
 sex: "male"
 age: "25"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

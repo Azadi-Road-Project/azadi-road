@@ -1,6 +1,7 @@
 ---
 id: "yasin-jamalzadeh"
 name: "Yasin Jamalzadeh"
+name-fa: ""
 sex: "male"
 age: "28"
 causeOfDeath: "Direct gunfire (Shotgun pellets)"

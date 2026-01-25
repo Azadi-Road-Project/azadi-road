@@ -1,6 +1,7 @@
 ---
 id: "ali-azizi-jafarabadi"
 name: "Ali Azizi Jafarabadi"
+name-fa: "علی عزیزی جعفرآبادی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

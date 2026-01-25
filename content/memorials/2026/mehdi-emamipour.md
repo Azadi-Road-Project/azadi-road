@@ -1,6 +1,7 @@
 ---
 id: "mehdi-emamipour"
 name: "Mehdi Emamipour"
+name-fa: "مهدی امامی‌پور"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

@@ -1,6 +1,7 @@
 ---
 id: "mohammad-ghasemi"
 name: "Mohammad Ghasemi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

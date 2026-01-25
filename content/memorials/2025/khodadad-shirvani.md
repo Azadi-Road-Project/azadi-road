@@ -1,6 +1,7 @@
 ---
 id: "khodadad-shirvani"
 name: "Khodadad Shirvani"
+name-fa: ""
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

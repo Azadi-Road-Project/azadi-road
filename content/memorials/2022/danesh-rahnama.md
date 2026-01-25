@@ -1,6 +1,7 @@
 ---
 id: "danesh-rahnama"
 name: "Danesh Rahnama"
+name-fa: ""
 sex: "male"
 age: "25"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

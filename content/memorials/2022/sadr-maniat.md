@@ -1,6 +1,7 @@
 ---
 id: "sadr-maniat"
 name: "Sadr Maniat"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "mohammad-hassan-torkaman"
 name: "Mohammad Hassan Torkaman"
+name-fa: ""
 sex: "male"
 age: "27"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

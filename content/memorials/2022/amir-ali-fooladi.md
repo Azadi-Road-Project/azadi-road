@@ -1,6 +1,7 @@
 ---
 id: "amir-ali-fooladi"
 name: "Amir Ali Fooladi"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "mahyar-mohammadi"
 name: "Mahyar Mohammadi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

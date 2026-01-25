@@ -1,6 +1,7 @@
 ---
 id: "masoud-zatparvar"
 name: "Masoud Zatparvar"
+name-fa: "مسعود ذات‌پرور"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

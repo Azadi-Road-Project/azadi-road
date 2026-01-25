@@ -1,6 +1,7 @@
 ---
 id: "amir-reza-naderzadeh"
 name: "Amir Reza Naderzadeh"
+name-fa: ""
 sex: "male"
 age: "19"
 causeOfDeath: "Unknown (Died in detention/protests)"

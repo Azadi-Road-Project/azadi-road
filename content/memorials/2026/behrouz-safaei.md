@@ -1,6 +1,7 @@
 ---
 id: "behrouz-safaei"
 name: "Behrouz Safaei"
+name-fa: "بهروز صفایی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

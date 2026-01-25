@@ -1,6 +1,7 @@
 ---
 id: "sina-naderi"
 name: "Sina Naderi"
+name-fa: ""
 sex: "male"
 age: "22"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

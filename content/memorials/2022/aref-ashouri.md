@@ -1,6 +1,7 @@
 ---
 id: "aref-ashouri"
 name: "Aref Ashouri"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

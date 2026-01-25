@@ -1,6 +1,7 @@
 ---
 id: "erfan-bozorgi"
 name: "Erfan Bozorgi"
+name-fa: "عرفان بزرگی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

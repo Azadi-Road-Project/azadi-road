@@ -1,6 +1,7 @@
 ---
 id: "mohammad-hossein-khah-2"
 name: "Mohammad Hossein-khah"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

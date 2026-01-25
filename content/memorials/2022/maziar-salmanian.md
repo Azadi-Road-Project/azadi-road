@@ -1,6 +1,7 @@
 ---
 id: "maziar-salmanian"
 name: "Maziar Salmanian"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

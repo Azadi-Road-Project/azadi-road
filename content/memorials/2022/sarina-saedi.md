@@ -1,6 +1,7 @@
 ---
 id: "sarina-saedi"
 name: "Sarina Saedi"
+name-fa: ""
 sex: "female"
 age: "16"
 causeOfDeath: "Severe head trauma from batons"

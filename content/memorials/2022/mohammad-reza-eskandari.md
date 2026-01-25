@@ -1,6 +1,7 @@
 ---
 id: "mohammad-reza-eskandari"
 name: "Mohammad Reza Eskandari"
+name-fa: ""
 sex: "male"
 age: "25"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

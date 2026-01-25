@@ -1,6 +1,7 @@
 ---
 id: "behnman-layeghpour"
 name: "Behnam Layeghpour"
+name-fa: ""
 sex: "male"
 age: "37"
 causeOfDeath: "Direct shot to the neck and chest"

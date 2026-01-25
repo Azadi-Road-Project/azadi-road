@@ -1,6 +1,7 @@
 ---
 id: "lina-namvar"
 name: "Lina Namvar"
+name-fa: ""
 sex: "female"
 age: "21"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

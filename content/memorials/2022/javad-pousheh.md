@@ -1,6 +1,7 @@
 ---
 id: "javad-pousheh"
 name: "Javad Pousheh"
+name-fa: ""
 sex: "male"
 age: "12"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "milad-zare"
 name: "Milad Zare"
+name-fa: ""
 sex: "male"
 age: "25"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

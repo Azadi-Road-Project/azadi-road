@@ -1,6 +1,7 @@
 ---
 id: "fereshteh-ahmadi"
 name: "Fereshteh Ahmadi"
+name-fa: ""
 sex: "female"
 age: "32"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

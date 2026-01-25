@@ -1,6 +1,7 @@
 ---
 id: "ghazaleh-chalabi-2"
 name: "Ghazaleh Chalabi"
+name-fa: ""
 sex: "female"
 age: "33"
 causeOfDeath: "Direct shot to the head"

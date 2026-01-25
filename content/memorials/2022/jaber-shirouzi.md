@@ -1,6 +1,7 @@
 ---
 id: "jaber-shirouzi"
 name: "Jaber Shirouzi"
+name-fa: ""
 sex: "male"
 age: "12"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

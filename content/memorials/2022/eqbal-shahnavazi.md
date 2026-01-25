@@ -1,6 +1,7 @@
 ---
 id: "eqbal-shahnavazi"
 name: "Eqbal Shahnavazi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "farhad-eyvazi"
 name: "Farhad Eyvazi"
+name-fa: "فرهاد عیوضی دودرائی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

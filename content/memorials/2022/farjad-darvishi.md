@@ -1,6 +1,7 @@
 ---
 id: "farjad-darvishi"
 name: "Farjad Darvishi"
+name-fa: ""
 sex: "male"
 age: "23"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

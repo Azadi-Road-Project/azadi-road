@@ -1,6 +1,7 @@
 ---
 id: "erfan-rezaei-2"
 name: "Erfan Rezaei"
+name-fa: ""
 sex: "male"
 age: "21"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

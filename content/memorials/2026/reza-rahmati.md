@@ -1,6 +1,7 @@
 ---
 id: "reza-rahmati"
 name: "Reza Rahmati"
+name-fa: "رضا رحمتی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

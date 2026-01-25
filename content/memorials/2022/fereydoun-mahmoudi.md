@@ -1,6 +1,7 @@
 ---
 id: "fereydoun-mahmoudi"
 name: "Fereydoun Mahmoudi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "kamal-feghi"
 name: "Kamal Feghi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

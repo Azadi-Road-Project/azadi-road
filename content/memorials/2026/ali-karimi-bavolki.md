@@ -1,6 +1,7 @@
 ---
 id: "ali-karimi-bavolki"
 name: "Ali Karimi Bavolki"
+name-fa: "علی کریمی باولکی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

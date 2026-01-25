@@ -1,6 +1,7 @@
 ---
 id: "vahab-mousavi"
 name: "Vahab Mousavi"
+name-fa: "وهاب موسوی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

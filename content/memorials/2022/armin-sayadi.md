@@ -1,6 +1,7 @@
 ---
 id: "armin-sayadi"
 name: "Armin Sayadi"
+name-fa: ""
 sex: "male"
 age: "18"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

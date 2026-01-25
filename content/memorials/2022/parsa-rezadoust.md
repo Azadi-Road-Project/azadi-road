@@ -1,6 +1,7 @@
 ---
 id: "parsa-rezadoust-2"
 name: "Parsa Rezadoust"
+name-fa: ""
 sex: "male"
 age: "17"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

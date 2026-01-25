@@ -1,6 +1,7 @@
 ---
 id: "amir-mohammad-koohkan"
 name: "Amir-Mohammad Koohkan"
+name-fa: "امیرمحمد کوهکن"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

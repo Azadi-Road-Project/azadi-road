@@ -1,6 +1,7 @@
 ---
 id: "omid-sarani"
 name: "Omid Sarani"
+name-fa: ""
 sex: "male"
 age: "13"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

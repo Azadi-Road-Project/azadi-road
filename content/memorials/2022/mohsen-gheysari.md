@@ -1,6 +1,7 @@
 ---
 id: "mohsen-gheysari"
 name: "Mohsen Gheysari"
+name-fa: ""
 sex: "male"
 age: "32"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

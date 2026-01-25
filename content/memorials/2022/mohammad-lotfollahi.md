@@ -1,6 +1,7 @@
 ---
 id: "mohammad-lotfollahi"
 name: "Mohammad Lotfollahi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "pouya-ahmadpour-pashaki"
 name: "Pouya Ahmadpour Pashaki"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Severe beatings with batons"

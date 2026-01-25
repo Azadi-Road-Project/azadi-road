@@ -1,6 +1,7 @@
 ---
 id: "hamid-reza-rouhi-reference"
 name: "Hamidreza Rouhi"
+name-fa: ""
 sex: "male"
 age: "19"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

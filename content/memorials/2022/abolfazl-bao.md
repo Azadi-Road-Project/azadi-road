@@ -1,6 +1,7 @@
 ---
 id: "abolfazl-bao"
 name: "Abolfazl Bao"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Direct shot to the heart"

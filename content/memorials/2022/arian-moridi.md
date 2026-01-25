@@ -1,6 +1,7 @@
 ---
 id: "arian-moridi"
 name: "Arian Moridi"
+name-fa: ""
 sex: "male"
 age: "22"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

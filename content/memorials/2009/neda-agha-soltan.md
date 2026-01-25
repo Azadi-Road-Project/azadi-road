@@ -1,6 +1,7 @@
 ---
 id: "neda-agha-soltan"
 name: "Neda Agha-Soltan"
+name-fa: ""
 sex: "female"
 age: "undefined"
 causeOfDeath: "Shot during Green Movement protests"

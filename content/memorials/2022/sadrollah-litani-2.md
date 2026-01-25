@@ -1,6 +1,7 @@
 ---
 id: "sadrollah-litani-2"
 name: "Sadrollah Litani"
+name-fa: ""
 sex: "male"
 age: "27"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

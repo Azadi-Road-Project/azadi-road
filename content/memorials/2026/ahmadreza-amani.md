@@ -1,6 +1,7 @@
 ---
 id: "ahmadreza-amani"
 name: "Ahmadreza Amani"
+name-fa: "احمدرضا امینی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

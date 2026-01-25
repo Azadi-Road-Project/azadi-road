@@ -1,6 +1,7 @@
 ---
 id: "mehrgan-zahmatkesh"
 name: "Mehrgan Zahmatkesh"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

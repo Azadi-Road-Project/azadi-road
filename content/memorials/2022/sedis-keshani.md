@@ -1,6 +1,7 @@
 ---
 id: "sedis-keshani"
 name: "Sedis Keshani"
+name-fa: ""
 sex: "male"
 age: "14"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

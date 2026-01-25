@@ -1,6 +1,7 @@
 ---
 id: "mohammad-nouri"
 name: "Mohammad Nouri"
+name-fa: "محمد نوری"
 sex: "male"
 age: "17"
 causeOfDeath: "Shot by security forces"

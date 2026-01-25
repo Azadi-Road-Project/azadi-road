@@ -1,6 +1,7 @@
 ---
 id: "mohammad-moghadasi"
 name: "Mohammad Moghadasi"
+name-fa: "محمد مقدسی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

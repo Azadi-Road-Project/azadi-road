@@ -1,6 +1,7 @@
 ---
 id: "soroush-soleimani"
 name: "Soroush Soleimani"
+name-fa: "سروش سلیمانی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

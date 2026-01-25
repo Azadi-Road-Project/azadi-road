@@ -1,6 +1,7 @@
 ---
 id: "esmail-dezvar"
 name: "Esmail Dezvar"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Torture in detention"

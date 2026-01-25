@@ -1,6 +1,7 @@
 ---
 id: "mehrzad-behrouz"
 name: "Mehrzad Behrouz"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

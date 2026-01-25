@@ -1,6 +1,7 @@
 ---
 id: "mehdi-asgari"
 name: "Mehdi Asgari"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "shayan-asadollahi"
 name: "Shayan Asadollahi"
+name-fa: "شایان اسدالهی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

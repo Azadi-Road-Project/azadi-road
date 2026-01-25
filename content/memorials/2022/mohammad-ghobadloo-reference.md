@@ -1,6 +1,7 @@
 ---
 id: "mohammad-ghobadloo-reference"
 name: "Mohammad Ghobadloo"
+name-fa: ""
 sex: "male"
 age: "23"
 causeOfDeath: "Execution"

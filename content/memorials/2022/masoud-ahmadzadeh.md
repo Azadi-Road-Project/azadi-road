@@ -1,6 +1,7 @@
 ---
 id: "masoud-ahmadzadeh"
 name: "Masoud Ahmadzadeh"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

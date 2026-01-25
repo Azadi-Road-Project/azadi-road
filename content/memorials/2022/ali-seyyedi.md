@@ -1,6 +1,7 @@
 ---
 id: "ali-seyyedi"
 name: "Ali Seyyedi"
+name-fa: ""
 sex: "male"
 age: "25"
 causeOfDeath: "Direct shot (Shotgun pellets to head and torso)"

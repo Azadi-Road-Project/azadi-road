@@ -1,6 +1,7 @@
 ---
 id: "seyed-mohammad-hosseini"
 name: "Seyed Mohammad Hosseini"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Intentionally hit by security vehicle"

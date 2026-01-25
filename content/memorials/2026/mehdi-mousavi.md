@@ -1,6 +1,7 @@
 ---
 id: "mehdi-mousavi"
 name: "Mehdi Mousavi"
+name-fa: "مهدی موسوی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

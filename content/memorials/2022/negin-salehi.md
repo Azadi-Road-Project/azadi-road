@@ -1,6 +1,7 @@
 ---
 id: "negin-salehi"
 name: "Negin Salehi"
+name-fa: ""
 sex: "female"
 age: "26"
 causeOfDeath: "Severe head trauma from batons"

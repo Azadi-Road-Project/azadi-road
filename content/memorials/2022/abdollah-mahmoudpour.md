@@ -1,6 +1,7 @@
 ---
 id: "abdollah-mahmoudpour"
 name: "Abdollah Mahmoudpour"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "mohammad-amin-azarshiv"
 name: "Mohammad Amin Azarshiv"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

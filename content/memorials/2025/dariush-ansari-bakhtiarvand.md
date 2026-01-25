@@ -1,6 +1,7 @@
 ---
 id: "dariush-ansari-bakhtiarvand"
 name: "Dariush Ansari Bakhtiarvand"
+name-fa: ""
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

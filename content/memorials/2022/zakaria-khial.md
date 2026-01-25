@@ -1,6 +1,7 @@
 ---
 id: "zakaria-khial"
 name: "Zakaria Khial"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

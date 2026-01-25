@@ -1,6 +1,7 @@
 ---
 id: "saeed-mohammadi"
 name: "Saeed Mohammadi"
+name-fa: ""
 sex: "male"
 age: "21"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

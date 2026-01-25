@@ -1,6 +1,7 @@
 ---
 id: "mohammad-javad-zahedi"
 name: "Mohammad Javad Zahedi"
+name-fa: ""
 sex: "male"
 age: "20"
 causeOfDeath: "Shot 95 times with shotgun pellets"

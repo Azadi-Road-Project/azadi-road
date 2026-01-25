@@ -1,6 +1,7 @@
 ---
 id: "reza-lotfi"
 name: "Reza Lotfi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

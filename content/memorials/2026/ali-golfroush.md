@@ -1,6 +1,7 @@
 ---
 id: "ali-golfroush"
 name: "Ali Golfroush"
+name-fa: "علی گلفروش"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

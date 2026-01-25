@@ -1,6 +1,7 @@
 ---
 id: "hadi-haghshenas"
 name: "Hadi Haghshenas"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Unknown (Died after detention)"

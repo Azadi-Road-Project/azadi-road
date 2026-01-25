@@ -1,6 +1,7 @@
 ---
 id: "reza-azimzadeh"
 name: "Reza Azimzadeh"
+name-fa: "رضا عظیم‌زاده"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Direct fire by IRGC forces"

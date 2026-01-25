@@ -1,6 +1,7 @@
 ---
 id: "ahad-ebrahimpour-abdoli"
 name: "Ahad Ebrahimpour Abdoli"
+name-fa: "احد ابراهیم پور پول عبدلی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

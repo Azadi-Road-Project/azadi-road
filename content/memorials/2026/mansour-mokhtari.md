@@ -1,6 +1,7 @@
 ---
 id: "mansour-mokhtari"
 name: "Mansour Mokhtari"
+name-fa: "منصور مختاری"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

@@ -1,6 +1,7 @@
 ---
 id: "amirhossein-bayati"
 name: "Amirhossein Bayati"
+name-fa: "امیرحسین بیاتی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

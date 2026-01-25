@@ -1,6 +1,7 @@
 ---
 id: "iman-mohammadi"
 name: "Iman Mohammadi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

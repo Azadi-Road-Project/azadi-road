@@ -1,6 +1,7 @@
 ---
 id: "mohsen-mohammadi"
 name: "Mohsen Mohammadi"
+name-fa: ""
 sex: "male"
 age: "28"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

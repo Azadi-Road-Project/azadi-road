@@ -1,6 +1,7 @@
 ---
 id: "hossein-akbarzadeh"
 name: "Hossein Akbarzadeh"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Killed in prison (Evin Prison incident)"

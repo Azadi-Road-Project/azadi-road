@@ -1,6 +1,7 @@
 ---
 id: "reza-khoshnood"
 name: "Reza Khoshnood"
+name-fa: ""
 sex: "male"
 age: "16"
 causeOfDeath: "Unknown (Protest related)"

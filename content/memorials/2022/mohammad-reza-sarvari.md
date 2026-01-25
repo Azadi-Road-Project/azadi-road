@@ -1,6 +1,7 @@
 ---
 id: "mohammad-reza-sarvari"
 name: "Mohammad Reza Sarvari"
+name-fa: ""
 sex: "male"
 age: "14"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

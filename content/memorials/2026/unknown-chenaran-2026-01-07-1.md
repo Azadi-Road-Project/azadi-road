@@ -1,6 +1,7 @@
 ---
 id: "unknown-chenaran-2026-01-07-1"
 name: "Unknown Hero 1"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Shot during protests"

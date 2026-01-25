@@ -1,6 +1,7 @@
 ---
 id: "aziz-moradi"
 name: "Aziz Moradi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Kalashnikov)"

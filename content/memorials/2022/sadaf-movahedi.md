@@ -1,6 +1,7 @@
 ---
 id: "sadaf-movahedi"
 name: "Sadaf Movahedi"
+name-fa: ""
 sex: "female"
 age: "17"
 causeOfDeath: "Blunt force trauma to the head (Batons)"

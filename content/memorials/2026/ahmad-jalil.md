@@ -1,6 +1,7 @@
 ---
 id: "ahmad-jalil"
 name: "Ahmad Jalil"
+name-fa: "احمد جلیلی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

@@ -1,6 +1,7 @@
 ---
 id: "omid-mahdavi"
 name: "Omid Mahdavi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Severe head trauma from batons"

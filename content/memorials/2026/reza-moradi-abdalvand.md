@@ -1,6 +1,7 @@
 ---
 id: "reza-moradi-abdalvand"
 name: "Reza Moradi Abdalvand"
+name-fa: "رضا مرادی عبدالوند"
 sex: "male"
 age: "18"
 causeOfDeath: "Direct gunfire by security forces"

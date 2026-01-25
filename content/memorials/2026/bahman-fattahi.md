@@ -1,6 +1,7 @@
 ---
 id: "bahman-fattahi"
 name: "Bahman Fattahi"
+name-fa: "بهمن فتاحی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

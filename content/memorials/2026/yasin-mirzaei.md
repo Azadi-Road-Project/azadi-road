@@ -1,6 +1,7 @@
 ---
 id: "yasin-mirzaei"
 name: "Yasin Mirzaei"
+name-fa: "یاسین میرزایی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

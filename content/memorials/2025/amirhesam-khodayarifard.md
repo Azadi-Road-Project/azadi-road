@@ -1,6 +1,7 @@
 ---
 id: "amirhesam-khodayarifard"
 name: "Amirhesam Khodayarifard"
+name-fa: ""
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

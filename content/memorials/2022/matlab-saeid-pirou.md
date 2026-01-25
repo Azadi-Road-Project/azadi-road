@@ -1,6 +1,7 @@
 ---
 id: "matlab-saeid-pirou"
 name: "Matlab Saeid Pirou"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "milad-derakhshan"
 name: "Milad Derakhshan"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Unknown (Killed in detention/prison)"

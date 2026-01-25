@@ -1,6 +1,7 @@
 ---
 id: "farez-aghamohammadi"
 name: "Farez Aghamohammadi"
+name-fa: "فارز (محسن) آقامحمدی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

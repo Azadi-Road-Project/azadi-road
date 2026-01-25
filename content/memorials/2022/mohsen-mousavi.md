@@ -1,6 +1,7 @@
 ---
 id: "mohsen-mousavi"
 name: "Mohsen Mousavi"
+name-fa: ""
 sex: "male"
 age: "32"
 causeOfDeath: "Direct shot to the head"

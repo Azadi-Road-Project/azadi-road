@@ -1,6 +1,7 @@
 ---
 id: "minoo-majidi"
 name: "Minoo Majidi"
+name-fa: ""
 sex: "female"
 age: "62"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

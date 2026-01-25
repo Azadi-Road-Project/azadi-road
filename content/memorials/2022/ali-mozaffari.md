@@ -1,6 +1,7 @@
 ---
 id: "ali-mozaffari"
 name: "Ali Mozaffari"
+name-fa: ""
 sex: "male"
 age: "17"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

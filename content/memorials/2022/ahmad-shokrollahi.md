@@ -1,6 +1,7 @@
 ---
 id: "ahmad-shokrollahi"
 name: "Ahmad Shokrollahi"
+name-fa: ""
 sex: "male"
 age: "24"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

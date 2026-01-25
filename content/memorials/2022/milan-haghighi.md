@@ -1,6 +1,7 @@
 ---
 id: "milan-haghighi-2"
 name: "Milan Haghighi"
+name-fa: ""
 sex: "male"
 age: "21"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "reza-esmailzadeh"
 name: "Reza Esmailzadeh"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

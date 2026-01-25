@@ -1,6 +1,7 @@
 ---
 id: "abolfazl-khaledi"
 name: "Abolfazl Khaledi"
+name-fa: "ابوالفضل خالدی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

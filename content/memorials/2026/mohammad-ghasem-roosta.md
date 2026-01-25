@@ -1,6 +1,7 @@
 ---
 id: "mohammad-ghasem-roosta"
 name: "Mohammad-Ghasem Roosta"
+name-fa: "محمدقاسم روستا"
 sex: "male"
 age: "16"
 causeOfDeath: "Shot by security forces"

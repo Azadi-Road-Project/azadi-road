@@ -1,6 +1,7 @@
 ---
 id: "mobin-yaghoubzadeh"
 name: "Mobin Yaghoubzadeh"
+name-fa: "مبین یعقوب‌زاده"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

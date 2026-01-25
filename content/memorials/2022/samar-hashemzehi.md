@@ -1,6 +1,7 @@
 ---
 id: "samar-hashemzehi"
 name: "Samar Hashemzehi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

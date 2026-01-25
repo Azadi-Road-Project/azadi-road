@@ -1,6 +1,7 @@
 ---
 id: "saman-nazari"
 name: "Saman Nazari"
+name-fa: "سامان نظری"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

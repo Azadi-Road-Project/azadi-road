@@ -1,6 +1,7 @@
 ---
 id: "keyvan-rezaei"
 name: "Keyvan Rezaei"
+name-fa: "کیوان رضایی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"

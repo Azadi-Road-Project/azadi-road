@@ -1,6 +1,7 @@
 ---
 id: "mohammad-amin-takli"
 name: "Mohammad Amin Takli"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

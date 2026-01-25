@@ -1,6 +1,7 @@
 ---
 id: "mehrshad-shahidi"
 name: "Mehrshad Shahidi"
+name-fa: ""
 sex: "male"
 age: "19"
 causeOfDeath: "Severe head trauma from batons"

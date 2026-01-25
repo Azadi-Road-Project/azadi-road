@@ -1,6 +1,7 @@
 ---
 id: "ainaz-javaheri"
 name: "Ainaz Javaheri"
+name-fa: ""
 sex: "female"
 age: "15"
 causeOfDeath: "Direct gunfire (Military-grade ammunition)"

@@ -1,6 +1,7 @@
 ---
 id: "mohammad-mehrdadi"
 name: "Mohammad Mehrdadi"
+name-fa: ""
 sex: "male"
 age: "Unknown"
 causeOfDeath: "Unknown (Protest related)"
