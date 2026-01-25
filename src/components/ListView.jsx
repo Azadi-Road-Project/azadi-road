@@ -1,6 +1,5 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { memorials } from '../data/memorials';
+import React, { useState, useEffect } from 'react';
+import { navigate } from 'gatsby';
 import VerificationBadge from './VerificationBadge';
 import './ListView.css';
 
@@ -8,17 +7,18 @@ import './ListView.css';
 const getImagePath = (person) => {
   // If person has explicit image property, use it
   if (person.image) return person.image;
-  // Otherwise generate from ID
-  return `/images/memorials/${person.id}.jpg`;
+  // Otherwise generate from ID with year-based path
+  const year = new Date(person.died_at).getFullYear();
+  return `/images/memorials/${year}/${person.id}.jpg`;
 };
 
 // Helper function to get placeholder image based on sex
 const getPlaceholderImage = (person) => {
   if (person.sex === 'female') {
-    return '/images/memorials/placeholder-female.jpg';
+    return '/images/placeholder-female.jpg';
   }
   // For male, unknown, other, or undefined
-  return '/images/memorials/placeholder-male.jpg';
+  return '/images/placeholder-male.jpg';
 };
 
 // Separate component for each person card to handle image state
@@ -77,20 +77,15 @@ const PersonCard = ({ person, onPersonClick, formatDate, getAge }) => {
   );
 };
 
-const ListView = () => {
-  const navigate = useNavigate();
-  const { year } = useParams();
-  
-  // Filter memorials by year
-  const yearMemorials = memorials.filter(hero => {
-    const heroYear = new Date(hero.died_at).getFullYear();
-    return heroYear === parseInt(year);
-  });
-
-  // Sort by date (oldest first - from first day to last day of month)
-  const sortedMemorials = [...yearMemorials].sort((a, b) => {
+const ListView = ({ memorials }) => {
+  // Sort by date (oldest first)
+  const sortedMemorials = [...memorials].sort((a, b) => {
     return new Date(a.died_at) - new Date(b.died_at);
   });
+
+  const year = sortedMemorials.length > 0 
+    ? new Date(sortedMemorials[0].died_at).getFullYear() 
+    : null;
 
   // Update meta tags for year pages
   useEffect(() => {

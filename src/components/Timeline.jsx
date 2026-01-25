@@ -1,22 +1,29 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { memorials } from '../data/memorials';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { navigate } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import './Timeline.css';
 
-const Timeline = () => {
-  const navigate = useNavigate();
-  const { personId, year } = useParams();
+const Timeline = ({ selectedYear }) => {
   const timelineRef = useRef(null);
   const activeItemRef = useRef(null);
 
-  // Get the year of currently selected person or year from route
-  const currentPerson = memorials.find(h => h.id === personId);
-  const selectedYear = year ? parseInt(year) : (currentPerson ? new Date(currentPerson.died_at).getFullYear() : null);
+  // Query all memorials to get year counts
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            died_at
+          }
+        }
+      }
+    }
+  `);
 
   // Count memorials per year
   const yearCounts = {};
-  memorials.forEach(hero => {
-    const year = new Date(hero.died_at).getFullYear();
+  data.allMarkdownRemark.nodes.forEach(node => {
+    const year = new Date(node.frontmatter.died_at).getFullYear();
     yearCounts[year] = (yearCounts[year] || 0) + 1;
   });
 
