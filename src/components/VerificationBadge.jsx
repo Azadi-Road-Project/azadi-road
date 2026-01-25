@@ -1,3 +1,4 @@
+import React from 'react';
 import './VerificationBadge.css';
 
 const VerificationBadge = ({ verified = false }) => {
