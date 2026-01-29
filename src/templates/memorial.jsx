@@ -146,13 +146,18 @@ const MemorialTemplate = ({ data, pageContext }) => {
 
   const year = getYear(person);
 
+  // Get the original image path for SEO (not the state variable which might change)
+  const seoImage = getImagePath(person);
+  const seoImageAlt = `Portrait photograph of ${person.name}, remembered for their sacrifice during ${person.causeOfDeath}`;
+
   return (
     <Layout>
       <SEO 
         title={`${person.name} - Memorial | Azadi Road`}
         description={`In memory of ${person.name}, age ${age}, who ${person.causeOfDeath}${deathDate ? ` on ${deathDate}` : ''}${location ? ` in ${location}` : ''}. A hero of Iran's freedom movement.`}
         pathname={`/memorial/${person.id}`}
-        image={imageSrc !== getPlaceholderImage(person) ? imageSrc : undefined}
+        image={seoImage}
+        imageAlt={seoImageAlt}
         article={true}
         datePublished={person.died_at}
       />
