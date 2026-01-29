@@ -7,7 +7,8 @@ const SEO = ({
   title, 
   description, 
   pathname, 
-  image, 
+  image,
+  imageAlt, 
   article = false,
   datePublished,
   dateModified,
@@ -84,6 +85,7 @@ const SEO = ({
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+      {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
 
       {/* Additional SEO tags */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -100,6 +102,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   pathname: PropTypes.string,
   image: PropTypes.string,
+  imageAlt: PropTypes.string,
   article: PropTypes.bool,
   datePublished: PropTypes.string,
   dateModified: PropTypes.string,
