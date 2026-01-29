@@ -5,6 +5,7 @@ import jalaliday from 'jalali-dayjs';
 import Layout from '../components/Layout';
 import Timeline from '../components/Timeline';
 import VerificationBadge from '../components/VerificationBadge';
+import SEO from '../components/SEO';
 import '../components/PersonProfile.css';
 
 // Extend dayjs with jalali support
@@ -147,6 +148,14 @@ const MemorialTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO 
+        title={`${person.name} - Memorial | Azadi Road`}
+        description={`In memory of ${person.name}, age ${age}, who ${person.causeOfDeath}${deathDate ? ` on ${deathDate}` : ''}${location ? ` in ${location}` : ''}. A hero of Iran's freedom movement.`}
+        pathname={`/memorial/${person.id}`}
+        image={imageSrc !== getPlaceholderImage(person) ? imageSrc : undefined}
+        article={true}
+        datePublished={person.died_at}
+      />
       <Timeline selectedYear={year ? parseInt(year) : null} />
       <article className="person-profile" itemScope itemType="https://schema.org/Person">
         <nav className="breadcrumb" aria-label="Breadcrumb">
