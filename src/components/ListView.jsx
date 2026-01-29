@@ -43,6 +43,7 @@ const PersonCard = ({ person, onPersonClick, formatDate, getAge }) => {
           alt={`Portrait of ${person.name}, age ${getAge(person.born_at, person.died_at)}`}
           onError={handleImageError}
           itemProp="image"
+          loading="lazy"
         />
       </div>
       
@@ -78,6 +79,10 @@ const PersonCard = ({ person, onPersonClick, formatDate, getAge }) => {
 };
 
 const ListView = ({ memorials }) => {
+  // Pagination state
+  const ITEMS_PER_PAGE = 50;
+  const [currentPage, setCurrentPage] = useState(1);
+  
   // Sort by date (oldest first)
   const sortedMemorials = [...memorials].sort((a, b) => {
     return new Date(a.died_at) - new Date(b.died_at);
@@ -86,6 +91,103 @@ const ListView = ({ memorials }) => {
   const year = sortedMemorials.length > 0 
     ? new Date(sortedMemorials[0].died_at).getFullYear() 
     : null;
+
+  // Calculate pagination
+  const totalPages = Math.ceil(sortedMemorials.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const displayedMemorials = sortedMemorials.slice(startIndex, endIndex);
+
+  // Read page from URL on mount and update when URL changes
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get('page');
+    
+    if (pageParam) {
+      const page = parseInt(pageParam, 10);
+      if (page >= 1 && page <= totalPages) {
+        setCurrentPage(page);
+      }
+    }
+  }, [totalPages]);
+
+  // Update URL when page changes
+  useEffect(() => {
+    if (typeof window === 'undefined' || currentPage === 1) return;
+    
+    const url = new URL(window.location.href);
+    url.searchParams.set('page', currentPage.toString());
+    window.history.replaceState({}, '', url.toString());
+  }, [currentPage]);
+
+  // Scroll to top when page changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+  }, [currentPage]);
+
+  // Page navigation handlers
+  const goToPage = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      
+      // Update URL
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        if (page === 1) {
+          url.searchParams.delete('page');
+        } else {
+          url.searchParams.set('page', page.toString());
+        }
+        window.history.pushState({}, '', url.toString());
+      }
+    }
+  };
+
+  const goToFirstPage = () => goToPage(1);
+  const goToLastPage = () => goToPage(totalPages);
+  const goToPreviousPage = () => goToPage(currentPage - 1);
+  const goToNextPage = () => goToPage(currentPage + 1);
+
+  // Generate page numbers to display
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxPagesToShow = 7;
+    
+    if (totalPages <= maxPagesToShow) {
+      // Show all pages if total is small
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Always show first page
+      pages.push(1);
+      
+      if (currentPage > 3) {
+        pages.push('...');
+      }
+      
+      // Show pages around current page
+      const start = Math.max(2, currentPage - 1);
+      const end = Math.min(totalPages - 1, currentPage + 1);
+      
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+      
+      if (currentPage < totalPages - 2) {
+        pages.push('...');
+      }
+      
+      // Always show last page
+      pages.push(totalPages);
+    }
+    
+    return pages;
+  };
 
   // Update meta tags for year pages
   useEffect(() => {
@@ -184,10 +286,13 @@ const ListView = ({ memorials }) => {
       <header className="listview-header">
         <h1>{year} - {sortedMemorials.length} {sortedMemorials.length === 1 ? 'Memorial' : 'Memorials'}</h1>
         <p className="listview-subtitle">Click on any name to view their full profile</p>
+        <p className="listview-progress">
+          Showing {startIndex + 1}-{Math.min(endIndex, sortedMemorials.length)} of {sortedMemorials.length}
+        </p>
       </header>
 
       <div className="listview-grid" role="list">
-        {sortedMemorials.map(person => (
+        {displayedMemorials.map(person => (
           <PersonCard 
             key={person.id}
             person={person}
@@ -197,6 +302,67 @@ const ListView = ({ memorials }) => {
           />
         ))}
       </div>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <nav className="pagination" aria-label="Pagination navigation">
+          <button
+            className="pagination-button"
+            onClick={goToFirstPage}
+            disabled={currentPage === 1}
+            aria-label="Go to first page"
+          >
+            « First
+          </button>
+          
+          <button
+            className="pagination-button"
+            onClick={goToPreviousPage}
+            disabled={currentPage === 1}
+            aria-label="Go to previous page"
+          >
+            ‹ Previous
+          </button>
+
+          <div className="pagination-numbers">
+            {getPageNumbers().map((page, index) => (
+              page === '...' ? (
+                <span key={`ellipsis-${index}`} className="pagination-ellipsis">
+                  ...
+                </span>
+              ) : (
+                <button
+                  key={page}
+                  className={`pagination-number ${currentPage === page ? 'active' : ''}`}
+                  onClick={() => goToPage(page)}
+                  aria-label={`Go to page ${page}`}
+                  aria-current={currentPage === page ? 'page' : undefined}
+                >
+                  {page}
+                </button>
+              )
+            ))}
+          </div>
+
+          <button
+            className="pagination-button"
+            onClick={goToNextPage}
+            disabled={currentPage === totalPages}
+            aria-label="Go to next page"
+          >
+            Next ›
+          </button>
+          
+          <button
+            className="pagination-button"
+            onClick={goToLastPage}
+            disabled={currentPage === totalPages}
+            aria-label="Go to last page"
+          >
+            Last »
+          </button>
+        </nav>
+      )}
     </section>
   );
 };
