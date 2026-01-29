@@ -1,7 +1,7 @@
 ---
 id: "sayyad-faramarzi"
 name: "Sayyad Faramarzi"
-name-fa: ""
+name-fa: "صیاد فرامرزی"
 sex: "male"
 age: "undefined"
 causeOfDeath: "Shot by security forces"
