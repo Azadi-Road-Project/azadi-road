@@ -11,6 +11,10 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="description" content="A digital memorial honoring those who lost their lives fighting for freedom in Iran. An interactive timeline documenting the faces and stories of Iran's freedom fighters from 2009 to present. راه آزادی - یادبود قهرمانان آزادی ایران" />
+        <meta name="keywords" content="Iran protests, freedom fighters, human rights Iran, Iran memorial, Mahsa Amini, Woman Life Freedom, Iran victims, political prisoners Iran, راه آزادی, جنبش آزادی ایران, مهسا امینی, زن زندگی آزادی" />
+        <meta name="author" content="Azadi Road Project" />
+        <meta name="theme-color" content="#262b31" />
         <link rel="icon" type="image/svg+xml" href="/Favicon.svg" />
         <link rel="canonical" href="https://azadi-road.com/" />
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />

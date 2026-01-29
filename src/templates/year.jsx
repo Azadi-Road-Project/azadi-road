@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Timeline from '../components/Timeline';
 import ListView from '../components/ListView';
+import SEO from '../components/SEO';
 
 const YearTemplate = ({ data, pageContext }) => {
   const memorials = data.allMarkdownRemark.nodes.map(node => {
@@ -25,6 +26,11 @@ const YearTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO 
+        title={`${pageContext.year} - Victims of Iran Freedom Movement | Azadi Road`}
+        description={`Memorial timeline of ${memorials.length} individuals who lost their lives fighting for freedom in Iran during ${pageContext.year}. Honoring the heroes of Iran's protest movement.`}
+        pathname={`/year/${pageContext.year}`}
+      />
       <Timeline selectedYear={pageContext.year} />
       <ListView memorials={memorials} />
     </Layout>
