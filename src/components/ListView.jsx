@@ -82,9 +82,28 @@ const ListView = ({ memorials }) => {
   // Pagination state
   const ITEMS_PER_PAGE = 50;
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const getNameFa = (person) => {
+    return person?.nameFa || person?.name_fa || person?.['name-fa'] || '';
+  };
+
+  const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+
+  const filteredMemorials = memorials.filter((person) => {
+    if (!normalizedSearchQuery) return true;
+
+    const englishName = (person?.name || '').toLowerCase();
+    const persianName = getNameFa(person).toLowerCase();
+
+    return (
+      englishName.includes(normalizedSearchQuery) ||
+      persianName.includes(normalizedSearchQuery)
+    );
+  });
   
   // Sort by date (oldest first)
-  const sortedMemorials = [...memorials].sort((a, b) => {
+  const sortedMemorials = [...filteredMemorials].sort((a, b) => {
     return new Date(a.died_at) - new Date(b.died_at);
   });
 
@@ -93,10 +112,20 @@ const ListView = ({ memorials }) => {
     : null;
 
   // Calculate pagination
-  const totalPages = Math.ceil(sortedMemorials.length / ITEMS_PER_PAGE);
+  const totalPages = Math.max(1, Math.ceil(sortedMemorials.length / ITEMS_PER_PAGE));
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const displayedMemorials = sortedMemorials.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [currentPage, totalPages]);
 
   // Read page from URL on mount and update when URL changes
   useEffect(() => {
@@ -284,27 +313,47 @@ const ListView = ({ memorials }) => {
   return (
     <section className="listview-container" aria-label="Memorial list">
       <header className="listview-header">
-        <h1>{year} - {sortedMemorials.length} {sortedMemorials.length === 1 ? 'Memorial' : 'Memorials'}</h1>
-        <p className="listview-subtitle">Click on any name to view their full profile</p>
-        <p className="listview-progress">
-          Showing {startIndex + 1}-{Math.min(endIndex, sortedMemorials.length)} of {sortedMemorials.length}
-        </p>
+        <h2>{year} - {sortedMemorials.length} {sortedMemorials.length === 1 ? 'Memorial' : 'Memorials'}</h2>
+        <div>
+        <div className="listview-search">
+          <input
+            id="listview-name-search"
+            type="search"
+            className="listview-search-input"
+            placeholder="Search by name (EN / FA)"
+            value={searchQuery}
+            onChange={(event) => setSearchQuery(event.target.value)}
+            aria-label="Search memorials by English or Persian name"
+          />
+        </div>
+        {/* <p className="listview-progress">
+          {sortedMemorials.length > 0
+            ? `Showing ${startIndex + 1}-${Math.min(endIndex, sortedMemorials.length)} of ${sortedMemorials.length}`
+            : 'No memorials found for this search'}
+        </p> */}
+        </div>
       </header>
 
       <div className="listview-grid" role="list">
-        {displayedMemorials.map(person => (
-          <PersonCard 
-            key={person.id}
-            person={person}
-            onPersonClick={handlePersonClick}
-            formatDate={formatDate}
-            getAge={getAge}
-          />
-        ))}
+        {displayedMemorials.length > 0 ? (
+          displayedMemorials.map(person => (
+            <PersonCard 
+              key={person.id}
+              person={person}
+              onPersonClick={handlePersonClick}
+              formatDate={formatDate}
+              getAge={getAge}
+            />
+          ))
+        ) : (
+          <p className="listview-empty" role="status" aria-live="polite">
+            No matching people found.
+          </p>
+        )}
       </div>
 
       {/* Pagination Controls */}
-      {totalPages > 1 && (
+      {sortedMemorials.length > 0 && totalPages > 1 && (
         <nav className="pagination" aria-label="Pagination navigation">
           <button
             className="pagination-button"

@@ -56,6 +56,7 @@ export const query = graphql`
         frontmatter {
           id
           name
+          name_fa
           sex
           age
           causeOfDeath
