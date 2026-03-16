@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -10,21 +12,45 @@
   padding: 0.5rem 1rem;
   /* background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%); */
   color: white;
-  text-align: left;
+  text-align: center;
+}
+
+.app-brand-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-brand-link:focus-visible {
+  outline: 2px solid #d3ca54;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.app-logo {
+  display: block;
+  width: 50px;
+  margin: 0.2rem auto 0.35rem;
+  height: auto;
 }
 
 .app-title {
-  display: inline;
+  display: inline-block;
   margin: 0;
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-family: 'Splash', cursive;
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2rem); /* سایز کمی بزرگتر */
+  font-weight: 400;
+  text-transform: uppercase; /* حروف بزرگ برای حس لوگو */
+  letter-spacing: -2px; /* حروف را به هم نزدیک می‌کند تا شبیه لوگو شود */
+  line-height: 1;
+  color: #ffffff; /* یا هر رنگی که در تم داری */
 }
+
 
 .app-subtitle {
   margin-left: 1rem;
-  display: inline;
   margin: 0.25rem 0 0 0;
   font-size: clamp(0.7rem, 2vw, 0.9rem);
   opacity: 0.9;
@@ -147,7 +173,7 @@
     padding: 0.75rem 0.5rem;
     text-align: center;
   }
-  
+
   .app-title {
     letter-spacing: 0.5px;
     display: block;

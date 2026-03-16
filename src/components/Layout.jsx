@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
 import '../index.css';
 import '../App.css';
+import logo from '../images/logo.svg';
 
 const Layout = ({ children }) => {
   const [showBanner, setShowBanner] = useState(() => {
@@ -22,7 +24,10 @@ const Layout = ({ children }) => {
   return (
     <div className="app">
       <header className="app-header">
-        <h1 className="app-title">Azadi Road</h1>
+        <Link to="/" className="app-brand-link" aria-label="Go to homepage">
+          <img src={logo} alt="Azadi Road" className="app-logo" />
+          <h1 className="app-title">Azadi <span>Road</span></h1>
+        </Link>
         <p className="app-subtitle">In Memory of the Fallen Heroes of Freedom</p>
       </header>
 

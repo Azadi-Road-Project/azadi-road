@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { navigate } from 'gatsby';
+import { Link } from 'gatsby';
 import VerificationBadge from './VerificationBadge';
+import { getMemorialImagePath } from '../utils/memorialImage';
 import './ListView.css';
-
-// Helper function to get image path
-const getImagePath = (person) => {
-  // If person has explicit image property, use it
-  if (person.image) return person.image;
-  // Otherwise generate from ID with year-based path
-  const year = new Date(person.died_at).getFullYear();
-  return `/images/memorials/${year}/${person.id}.jpg`;
-};
 
 // Helper function to get placeholder image based on sex
 const getPlaceholderImage = (person) => {
@@ -22,58 +14,58 @@ const getPlaceholderImage = (person) => {
 };
 
 // Separate component for each person card to handle image state
-const PersonCard = ({ person, onPersonClick, formatDate, getAge }) => {
-  const [imageSrc, setImageSrc] = useState(getImagePath(person));
+const PersonCard = ({ person, formatDate, getAge }) => {
+  const [imageSrc, setImageSrc] = useState(getMemorialImagePath(person));
 
   const handleImageError = () => {
     setImageSrc(getPlaceholderImage(person));
   };
 
   return (
-    <article 
-      className="listview-card"
-      onClick={() => onPersonClick(person.id)}
-      role="listitem"
-      itemScope
-      itemType="https://schema.org/Person"
-    >
-      <div className="card-image">
-        <img 
-          src={imageSrc} 
-          alt={`Portrait of ${person.name}, age ${getAge(person.born_at, person.died_at)}`}
-          onError={handleImageError}
-          itemProp="image"
-          loading="lazy"
-        />
-      </div>
-      
-      <div className="card-content">
-        <VerificationBadge reviewed={person.reviewed} />
-        <h2 className="card-name" itemProp="name">{person.name}</h2>
+    <article className="listview-card" role="listitem" itemScope itemType="https://schema.org/Person">
+      <Link
+        to={`/memorial/${person.id}`}
+        className="listview-card-link"
+        aria-label={`View memorial profile of ${person.name}`}
+      >
+        <div className="card-image">
+          <img 
+            src={imageSrc} 
+            alt={`Portrait of ${person.name}, age ${getAge(person.born_at, person.died_at)}`}
+            onError={handleImageError}
+            itemProp="image"
+            loading="lazy"
+          />
+        </div>
         
-        <dl className="card-details">
-          <div className="card-detail-item">
-            <dt className="detail-label">Date:</dt>
-            <dd className="detail-value">
-              <time dateTime={person.died_at} itemProp="deathDate">{formatDate(person.died_at)}</time>
-            </dd>
-          </div>
+        <div className="card-content">
+          <VerificationBadge reviewed={person.reviewed} />
+          <h2 className="card-name" itemProp="name">{person.name}</h2>
           
-          <div className="card-detail-item">
-            <dt className="detail-label">Age:</dt>
-            <dd className="detail-value" itemProp="age">{getAge(person.born_at, person.died_at)}</dd>
-          </div>
+          <dl className="card-details">
+            <div className="card-detail-item">
+              <dt className="detail-label">Date:</dt>
+              <dd className="detail-value">
+                <time dateTime={person.died_at} itemProp="deathDate">{formatDate(person.died_at)}</time>
+              </dd>
+            </div>
+            
+            <div className="card-detail-item">
+              <dt className="detail-label">Age:</dt>
+              <dd className="detail-value" itemProp="age">{getAge(person.born_at, person.died_at)}</dd>
+            </div>
+            
+            <div className="card-detail-item">
+              <dt className="detail-label">City:</dt>
+              <dd className="detail-value" itemProp="deathPlace">{person.city}</dd>
+            </div>
+          </dl>
           
-          <div className="card-detail-item">
-            <dt className="detail-label">City:</dt>
-            <dd className="detail-value" itemProp="deathPlace">{person.city}</dd>
-          </div>
-        </dl>
-        
-        <p className="card-cause" itemProp="deathCause">
-          {person.causeOfDeath}
-        </p>
-      </div>
+          <p className="card-cause" itemProp="deathCause">
+            {person.causeOfDeath}
+          </p>
+        </div>
+      </Link>
     </article>
   );
 };
@@ -102,13 +94,17 @@ const ListView = ({ memorials }) => {
     );
   });
   
+  const allYearMemorials = [...memorials].sort((a, b) => {
+    return new Date(a.died_at) - new Date(b.died_at);
+  });
+
   // Sort by date (oldest first)
   const sortedMemorials = [...filteredMemorials].sort((a, b) => {
     return new Date(a.died_at) - new Date(b.died_at);
   });
 
-  const year = sortedMemorials.length > 0 
-    ? new Date(sortedMemorials[0].died_at).getFullYear() 
+  const year = allYearMemorials.length > 0 
+    ? new Date(allYearMemorials[0].died_at).getFullYear() 
     : null;
 
   // Calculate pagination
@@ -279,10 +275,6 @@ const ListView = ({ memorials }) => {
     };
   }, [year, sortedMemorials.length]);
 
-  const handlePersonClick = (personId) => {
-    navigate(`/memorial/${personId}`);
-  };
-
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
@@ -326,6 +318,7 @@ const ListView = ({ memorials }) => {
             aria-label="Search memorials by English or Persian name"
           />
         </div>
+
         {/* <p className="listview-progress">
           {sortedMemorials.length > 0
             ? `Showing ${startIndex + 1}-${Math.min(endIndex, sortedMemorials.length)} of ${sortedMemorials.length}`
@@ -340,7 +333,6 @@ const ListView = ({ memorials }) => {
             <PersonCard 
               key={person.id}
               person={person}
-              onPersonClick={handlePersonClick}
               formatDate={formatDate}
               getAge={getAge}
             />
@@ -412,6 +404,30 @@ const ListView = ({ memorials }) => {
           </button>
         </nav>
       )}
+
+      
+        {allYearMemorials.length > 0 && (
+          <details className="listview-link-directory">
+            <summary>
+              {allYearMemorials.length} memorial {allYearMemorials.length === 1 ? 'profile' : 'profiles'} recorded in {year}
+            </summary>
+            <nav
+              className="listview-link-directory-content"
+              aria-label={`All memorial profile links for ${year}`}
+            >
+              {allYearMemorials.map((person) => (
+                <Link
+                  key={`directory-${person.id}`}
+                  to={`/memorial/${person.id}`}
+                  className="listview-directory-link"
+                >
+                  {person.name}
+                </Link>
+              ))}
+            </nav>
+          </details>
+        )}
+
     </section>
   );
 };

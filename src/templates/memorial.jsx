@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { graphql, navigate } from 'gatsby';
+import { graphql, navigate, Link } from 'gatsby';
 import dayjs from 'dayjs';
 import jalaliday from 'jalali-dayjs';
 import Layout from '../components/Layout';
-import Timeline from '../components/Timeline';
 import VerificationBadge from '../components/VerificationBadge';
 import SEO from '../components/SEO';
+import { getMemorialImagePath } from '../utils/memorialImage';
 import '../components/PersonProfile.css';
 
 // Extend dayjs with jalali support
 dayjs.extend(jalaliday);
-
-// Helper function to get image path
-const getImagePath = (person) => {
-  if (person.image) return person.image;
-  const year = new Date(person.died_at).getFullYear();
-  return `/images/memorials/${year}/${person.id}.jpg`;
-};
 
 // Helper function to get placeholder image based on sex
 const getPlaceholderImage = (person) => {
@@ -38,9 +31,10 @@ const MemorialTemplate = ({ data, pageContext }) => {
   const memorial = data.markdownRemark;
   const allMemorials = data.allMarkdownRemark.nodes;
   const person = memorial.frontmatter;
+  const siteUrl = 'https://azadiroad.com';
   
   const currentIndex = allMemorials.findIndex(h => h.frontmatter.id === person.id);
-  const [imageSrc, setImageSrc] = useState(getImagePath(person));
+  const [imageSrc, setImageSrc] = useState(getMemorialImagePath(person));
 
   // Calculate age helper function
   const calculateAge = (person) => {
@@ -86,6 +80,7 @@ const MemorialTemplate = ({ data, pageContext }) => {
   };
 
   const links = getLinks(person);
+  const sameAsLinks = links.map((link) => link.url).filter(Boolean);
 
   // Format death date
   const formatDeathDate = (person) => {
@@ -109,15 +104,87 @@ const MemorialTemplate = ({ data, pageContext }) => {
 
   const deathDate = formatDeathDate(person);
 
+  const profilePath = `/memorial/${person.id}`;
+  const profileUrl = `${siteUrl}${profilePath}`;
+  const imagePath = getMemorialImagePath(person);
+  const absoluteImageUrl = imagePath.startsWith('http')
+    ? imagePath
+    : `${siteUrl}${imagePath}`;
+
+  const prevIndex = currentIndex > 0 ? currentIndex - 1 : allMemorials.length - 1;
+  const nextIndex = currentIndex < allMemorials.length - 1 ? currentIndex + 1 : 0;
+  const previousPersonId = allMemorials[prevIndex]?.frontmatter?.id;
+  const nextPersonId = allMemorials[nextIndex]?.frontmatter?.id;
+
+  const plainTextDescription = memorial.html
+    ? memorial.html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+    : '';
+
+  // Extract year
+  const getYear = (person) => {
+    if (!person.died_at) return null;
+    const date = dayjs(person.died_at);
+    return date.isValid() ? date.format('YYYY') : null;
+  };
+
+  const year = getYear(person);
+
+  const breadcrumbItems = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Homepage',
+      item: siteUrl,
+    },
+  ];
+
+  if (year) {
+    breadcrumbItems.push({
+      '@type': 'ListItem',
+      position: 2,
+      name: String(year),
+      item: `${siteUrl}/year/${year}`,
+    });
+  }
+
+  breadcrumbItems.push({
+    '@type': 'ListItem',
+    position: year ? 3 : 2,
+    name: person.name,
+    item: profileUrl,
+  });
+
+  const personStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: person.name,
+    ...(person.name_fa ? { alternateName: person.name_fa } : {}),
+    url: profileUrl,
+    image: absoluteImageUrl,
+    ...(plainTextDescription ? { description: plainTextDescription } : {}),
+    ...(person.died_at ? { deathDate: person.died_at } : {}),
+    ...(location ? { deathPlace: { '@type': 'Place', name: location } } : {}),
+    ...(sameAsLinks.length > 0 ? { sameAs: sameAsLinks } : {}),
+    mainEntityOfPage: profileUrl,
+  };
+
+  const breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems,
+  };
+
   // Navigation functions
   const goToPrevious = () => {
-    const prevIndex = currentIndex > 0 ? currentIndex - 1 : allMemorials.length - 1;
-    navigate(`/memorial/${allMemorials[prevIndex].frontmatter.id}`);
+    if (previousPersonId) {
+      navigate(`/memorial/${previousPersonId}`);
+    }
   };
 
   const goToNext = () => {
-    const nextIndex = currentIndex < allMemorials.length - 1 ? currentIndex + 1 : 0;
-    navigate(`/memorial/${allMemorials[nextIndex].frontmatter.id}`);
+    if (nextPersonId) {
+      navigate(`/memorial/${nextPersonId}`);
+    }
   };
 
   // Keyboard navigation
@@ -137,47 +204,44 @@ const MemorialTemplate = ({ data, pageContext }) => {
     };
   }, [currentIndex]);
 
-  // Extract year
-  const getYear = (person) => {
-    if (!person.died_at) return null;
-    const date = dayjs(person.died_at);
-    return date.isValid() ? date.format('YYYY') : null;
-  };
-
-  const year = getYear(person);
-
   // Get the original image path for SEO (not the state variable which might change)
-  const seoImage = getImagePath(person);
+  const seoImage = imagePath;
   const seoImageAlt = `Portrait photograph of ${person.name}, remembered for their sacrifice during ${person.causeOfDeath}`;
 
   return (
     <Layout>
+      
+        <div className="profile-divider" aria-hidden="true" />
+        
       <SEO 
-        title={`${person.name} - Memorial | Azadi Road`}
-        description={`In memory of ${person.name}, age ${age}, who ${person.causeOfDeath}${deathDate ? ` on ${deathDate}` : ''}${location ? ` in ${location}` : ''}. A hero of Iran's freedom movement.`}
-        pathname={`/memorial/${person.id}`}
+        title={`${person.name}${person.name_fa ? ` (${person.name_fa})` : ''} - Memorial | Azadi Road`}
+        description={`In memory of ${person.name}${person.name_fa ? ` (${person.name_fa})` : ''}, age ${age}, who ${person.causeOfDeath}${deathDate ? ` on ${deathDate}` : ''}${location ? ` in ${location}` : ''}. A hero of Iran's freedom movement.`}
+        pathname={profilePath}
         image={seoImage}
         imageAlt={seoImageAlt}
         article={true}
         datePublished={person.died_at}
-      />
-      <Timeline selectedYear={year ? parseInt(year) : null} />
+      >
+        <script type="application/ld+json">{JSON.stringify(personStructuredData)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbStructuredData)}</script>
+      </SEO>
       <article className="person-profile" itemScope itemType="https://schema.org/Person">
         <nav className="breadcrumb" aria-label="Breadcrumb">
-          <span className="breadcrumb-link" onClick={() => navigate('/')}>Homepage</span>
+          <Link className="breadcrumb-link" to="/">Homepage</Link>
           {year && (
             <>
               <span className="breadcrumb-separator"> &gt; </span>
-              <span className="breadcrumb-link" onClick={() => navigate(`/year/${year}`)}>{year}</span>
+              <Link className="breadcrumb-link" to={`/year/${year}`}>{year}</Link>
             </>
           )}
           <span className="breadcrumb-separator"> &gt; </span>
           <span className="breadcrumb-current" itemProp="name">{person.name}</span>
         </nav>
-        
-        <button className="nav-arrow nav-arrow-left" onClick={goToPrevious} aria-label="Previous person">
-          ‹
-        </button>
+        {previousPersonId ? (
+          <Link className="nav-arrow nav-arrow-left" to={`/memorial/${previousPersonId}`} aria-label="Previous person">
+            ‹
+          </Link>
+        ) : null}
         
         <div className="profile-content">
           <figure className="profile-image-container">
@@ -233,9 +297,11 @@ const MemorialTemplate = ({ data, pageContext }) => {
           </div>
         </div>
         
-        <button className="nav-arrow nav-arrow-right" onClick={goToNext} aria-label="Next person">
-          ›
-        </button>
+        {nextPersonId ? (
+          <Link className="nav-arrow nav-arrow-right" to={`/memorial/${nextPersonId}`} aria-label="Next person">
+            ›
+          </Link>
+        ) : null}
       </article>
     </Layout>
   );
@@ -248,6 +314,7 @@ export const query = graphql`
       frontmatter {
         id
         name
+        name_fa
         sex
         age
         causeOfDeath

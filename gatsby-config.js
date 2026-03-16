@@ -49,10 +49,14 @@ module.exports = {
           })
         },
         serialize: ({ path }) => {
+          const isHomepage = path === '/';
+          const isMemorialPage = path.startsWith('/memorial/');
+          const isYearPage = path.startsWith('/year/');
+
           return {
             url: path,
-            changefreq: 'weekly',
-            priority: path === '/' ? 1.0 : 0.8,
+            changefreq: isMemorialPage ? 'monthly' : 'weekly',
+            priority: isHomepage ? 1.0 : isMemorialPage ? 0.95 : isYearPage ? 0.85 : 0.7,
           }
         },
       },
