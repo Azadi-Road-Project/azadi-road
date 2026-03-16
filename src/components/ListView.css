@@ -65,6 +65,47 @@
   box-shadow: 0 0 0 2px rgba(90, 93, 97, 0.25);
 }
 
+.listview-link-directory {
+  margin: 1rem auto 0;
+  text-align: left;
+  border: 1px solid #2f3236;
+  border-radius: 8px;
+  background: #17191c;
+}
+
+.listview-link-directory summary {
+  cursor: pointer;
+  color: #c1c4c9;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.listview-link-directory-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 0.8rem 0.8rem;
+}
+
+.listview-directory-link {
+  color: #9ec5ff;
+  text-decoration: none;
+  border: 1px solid #3a3d41;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+.listview-directory-link:hover,
+.listview-directory-link:focus-visible {
+  color: #fff;
+  border-color: #6a6d71;
+  background: #2a2d31;
+  outline: none;
+}
+
 .listview-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -76,17 +117,33 @@
   background: #1d1f22;
   border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid #2a2d31;
   display: flex;
   flex-direction: column;
 }
 
+.listview-card-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
 .listview-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   border-color: #3a3d41;
+}
+
+.listview-card:focus-within {
+  border-color: #6a6d71;
+  box-shadow: 0 0 0 2px rgba(106, 109, 113, 0.25);
+}
+
+.listview-card-link:focus {
+  outline: none;
 }
 
 .card-image {

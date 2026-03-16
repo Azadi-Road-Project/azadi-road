@@ -44,11 +44,16 @@ const SEO = ({
     language,
   } = site.siteMetadata;
 
+  const resolveImageUrl = (imagePath) => {
+    if (!imagePath) return `${siteUrl}${defaultImage}`;
+    return imagePath.startsWith('http') ? imagePath : `${siteUrl}${imagePath}`;
+  };
+
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ''}`,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: resolveImageUrl(image || defaultImage),
     keywords: defaultKeywords,
   };
 
