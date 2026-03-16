@@ -6,7 +6,7 @@ sex: "male"
 age: "19"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Karaj"
 province: "Alborz"
 reviewed: false

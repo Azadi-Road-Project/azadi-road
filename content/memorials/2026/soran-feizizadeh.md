@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "torture"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Bijar"
 province: "Kurdistan"
 reviewed: false

@@ -6,7 +6,7 @@ sex: "male"
 age: "32"
 causeOfDeath: "shooting"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Arak"
 province: "Markazi"
 reviewed: false

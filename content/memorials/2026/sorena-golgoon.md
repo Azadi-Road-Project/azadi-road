@@ -6,7 +6,7 @@ sex: "male"
 age: "18"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Shahsavar"
 province: "Mazandaran"
 reviewed: false

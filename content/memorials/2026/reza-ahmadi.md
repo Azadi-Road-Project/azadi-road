@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "shooting"
 born_at: "undefined"
-died_at: "2026-01"
+died_at: "2026-01-08"
 city: "Fooladshahr"
 province: "Isfahan"
 reviewed: false

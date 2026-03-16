@@ -6,7 +6,7 @@ sex: "female"
 age: "45"
 causeOfDeath: "shooting"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Rasht"
 province: "Gilan"
 reviewed: false

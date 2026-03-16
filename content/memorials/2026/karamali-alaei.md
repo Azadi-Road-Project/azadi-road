@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "gunshot to neck"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Homayounshahr"
 province: "Isfahan"
 reviewed: false

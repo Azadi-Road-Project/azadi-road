@@ -6,7 +6,7 @@ sex: "male"
 age: "35"
 causeOfDeath: "gunshot to heart"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Fardis, Karaj"
 province: "Alborz"
 reviewed: false

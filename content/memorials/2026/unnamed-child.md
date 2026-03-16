@@ -6,7 +6,7 @@ sex: "undefined"
 age: "15"
 causeOfDeath: "undefined"
 born_at: "2009"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "undefined"
 province: "undefined"
 reviewed: false

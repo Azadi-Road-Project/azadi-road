@@ -6,7 +6,7 @@ sex: "female"
 age: "21"
 causeOfDeath: "direct shooting"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Dalahu"
 province: "Kermanshah"
 reviewed: false

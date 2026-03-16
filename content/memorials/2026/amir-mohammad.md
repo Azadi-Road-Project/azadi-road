@@ -6,7 +6,7 @@ sex: "male"
 age: "17"
 causeOfDeath: "gunshot"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Marvdasht"
 province: "Fars"
 reviewed: false

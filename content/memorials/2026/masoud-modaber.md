@@ -6,7 +6,7 @@ sex: "male"
 age: "40"
 causeOfDeath: "shot"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Isfahan"
 province: "Isfahan"
 reviewed: false

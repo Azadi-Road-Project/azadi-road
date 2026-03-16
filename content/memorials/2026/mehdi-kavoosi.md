@@ -6,7 +6,7 @@ sex: "male"
 age: "27"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "2026-01"
+died_at: "2026-01-08"
 city: "Galikesh"
 province: "Golestan"
 reviewed: false

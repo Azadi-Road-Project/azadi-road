@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "shot in head"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Pakdasht"
 province: "Tehran"
 reviewed: false

@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "gunshot to head"
 born_at: "1988"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Tehran"
 province: "Tehran"
 reviewed: false

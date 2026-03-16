@@ -6,7 +6,7 @@ sex: "male"
 age: "25"
 causeOfDeath: "shot"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Gohardasht"
 province: "Alborz"
 reviewed: false
