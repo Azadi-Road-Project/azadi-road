@@ -1,0 +1,18 @@
+---
+id: "mohammad-mehdi-fathi"
+name: "Mohammad Mehdi Fathi"
+name-fa: "محمد مهدی فتحی"
+sex: "male"
+age: "undefined"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01-09"
+city: "Ahvaz"
+province: "Khuzestan"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Mohammad Mehdi Fathi died in Ahvaz during protests against government oppression.

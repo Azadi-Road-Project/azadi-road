@@ -1,0 +1,18 @@
+---
+id: "amin-amaninejad"
+name: "Amin Amaninejad"
+name-fa: "امین امانی‌نژاد"
+sex: "male"
+age: "undefined"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01-09"
+city: "Rasht"
+province: "Gilan"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Amin Amaninejad was killed during protests in Rasht.

@@ -1,0 +1,18 @@
+---
+id: "mehdi-hajivand-rahimi"
+name: "Mehdi Hajivand Rahimi"
+name-fa: "مهدی حاجیوند رحیمی"
+sex: "male"
+age: "undefined"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01-09"
+city: "Dezful"
+province: "Khuzestan"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Mehdi Hajivand Rahimi was killed in Dezful, Iran.

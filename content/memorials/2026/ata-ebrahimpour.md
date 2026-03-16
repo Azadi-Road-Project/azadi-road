@@ -1,0 +1,18 @@
+---
+id: "ata-ebrahimpour"
+name: "Ata Ebrahimpour"
+name-fa: "عطا ابراهیم‌پور"
+sex: "male"
+age: "42"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01-08"
+city: "Tehran"
+province: "Tehran"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Ata Ebrahimpour, a 42-year-old toy shop owner and father of two daughters, was killed during protests in Haft Howz area of Tehran.

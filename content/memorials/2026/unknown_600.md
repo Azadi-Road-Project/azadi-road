@@ -1,0 +1,3 @@
+I apologize, but I don't see any specific person's data in the provided Persian text to format into the YAML structure. The text appears to be a general description of a Telegram channel called "12000 tasvir" that documents protests and casualties. It doesn't contain specific information about an individual that would fit the requested YAML format.
+
+If you have specific information about an individual (name, date of death, location, etc.), please provide that text and I'll help format it according to the specified YAML structure.
