@@ -1,0 +1,18 @@
+---
+id: "alireza-mousavi-nour"
+name: "Alireza Mousavi Nour"
+name-fa: "علیرضا موسوی نور"
+sex: "male"
+age: "undefined"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01-09"
+city: "Baharestan"
+province: "Isfahan"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Alireza Mousavi Nour died in Baharestan, Isfahan during the freedom movement.

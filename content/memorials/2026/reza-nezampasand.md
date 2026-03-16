@@ -1,0 +1,18 @@
+---
+id: "reza-nezampasand"
+name: "Reza Nezampasand"
+name-fa: "رضا نظام‌پسند"
+sex: "male"
+age: "undefined"
+causeOfDeath: "undefined"
+born_at: "undefined"
+died_at: "2026-01"
+city: "Rasht"
+province: "Gilan"
+reviewed: false
+links:
+  - url: "https://t.me/t12000tasvir"
+    label: "t12000tasvir"
+---
+
+Martyr of freedom, the unsilenceable voice of a nation.
