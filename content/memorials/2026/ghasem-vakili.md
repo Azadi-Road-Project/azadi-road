@@ -6,7 +6,7 @@ sex: "male"
 age: "40"
 causeOfDeath: "gunshot to head"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Qazvin"
 province: "Qazvin"
 reviewed: false

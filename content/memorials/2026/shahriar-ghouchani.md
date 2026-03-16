@@ -6,7 +6,7 @@ sex: "male"
 age: "23"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Mashhad"
 province: "Razavi Khorasan"
 reviewed: false

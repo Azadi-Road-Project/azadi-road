@@ -6,7 +6,7 @@ sex: "male"
 age: "26"
 causeOfDeath: "undefined"
 born_at: "1996-12"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Zahedan"
 province: "Sistan and Baluchestan"
 reviewed: false

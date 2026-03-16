@@ -6,7 +6,7 @@ sex: "female"
 age: "17"
 causeOfDeath: "head injury and tear gas exposure"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Tehran"
 province: "Tehran"
 reviewed: false

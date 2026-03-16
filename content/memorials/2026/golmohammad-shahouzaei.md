@@ -6,7 +6,7 @@ sex: "male"
 age: "undefined"
 causeOfDeath: "undefined"
 born_at: "1977-12-11"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Zahedan"
 province: "Sistan and Baluchestan"
 reviewed: false

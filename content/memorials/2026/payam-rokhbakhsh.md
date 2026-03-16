@@ -6,7 +6,7 @@ sex: "male"
 age: "31"
 causeOfDeath: "gunshot wound to lung"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Shiraz"
 province: "Fars"
 reviewed: false

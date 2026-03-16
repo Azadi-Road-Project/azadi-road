@@ -6,7 +6,7 @@ sex: "male"
 age: "35"
 causeOfDeath: "gunshot"
 born_at: "1990"
-died_at: "2026-01"
+died_at: "2026-01-08"
 city: "Mashhad"
 province: "Khorasan Razavi"
 reviewed: false

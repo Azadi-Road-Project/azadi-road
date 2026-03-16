@@ -6,7 +6,7 @@ sex: "female"
 age: "18"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Bandar Abbas"
 province: "Hormozgan"
 reviewed: false

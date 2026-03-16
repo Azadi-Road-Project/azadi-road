@@ -6,7 +6,7 @@ sex: "male"
 age: "32"
 causeOfDeath: "undefined"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Isfahan"
 province: "Isfahan"
 reviewed: false

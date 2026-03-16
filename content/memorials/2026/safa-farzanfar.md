@@ -6,7 +6,7 @@ sex: "male"
 age: "25"
 causeOfDeath: "undefined"
 born_at: "2000"
-died_at: "2026-01"
+died_at: "2026-01-08"
 city: "Gonbad Kavus"
 province: "Golestan"
 reviewed: false

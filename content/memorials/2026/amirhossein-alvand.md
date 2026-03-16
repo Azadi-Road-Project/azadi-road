@@ -6,7 +6,7 @@ sex: "male"
 age: "21"
 causeOfDeath: "gunshot to eye"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Eslamshahr"
 province: "Tehran"
 reviewed: false

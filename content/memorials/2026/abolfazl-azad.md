@@ -6,7 +6,7 @@ sex: "male"
 age: "30s"
 causeOfDeath: "gunshot wounds to leg and side"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Eslamshahr"
 province: "Tehran"
 reviewed: false

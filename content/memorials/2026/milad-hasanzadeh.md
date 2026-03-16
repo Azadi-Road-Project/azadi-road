@@ -6,7 +6,7 @@ sex: "male"
 age: "17"
 causeOfDeath: "undefined"
 born_at: "2007-08-25"
-died_at: "2026-01"
+died_at: "2026-01-08"
 city: "Tehran"
 province: "Tehran"
 reviewed: false

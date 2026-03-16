@@ -6,7 +6,7 @@ sex: "male"
 age: "under 30"
 causeOfDeath: "gunshot"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "Astaneh-ye Ashrafiyeh"
 province: "Gilan"
 reviewed: false

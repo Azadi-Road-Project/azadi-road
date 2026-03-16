@@ -6,7 +6,7 @@ sex: "female"
 age: "34"
 causeOfDeath: "gunshot to head"
 born_at: "undefined"
-died_at: "undefined"
+died_at: "2026-01-08"
 city: "undefined"
 province: "undefined"
 reviewed: false
