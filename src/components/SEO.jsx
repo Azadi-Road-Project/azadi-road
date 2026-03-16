@@ -57,6 +57,16 @@ const SEO = ({
     keywords: defaultKeywords,
   };
 
+  const getImageMimeType = (url) => {
+    const normalized = (url || '').toLowerCase();
+    if (normalized.endsWith('.png')) return 'image/png';
+    if (normalized.endsWith('.webp')) return 'image/webp';
+    if (normalized.endsWith('.jpg') || normalized.endsWith('.jpeg')) return 'image/jpeg';
+    return undefined;
+  };
+
+  const imageType = getImageMimeType(seo.image);
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -73,6 +83,9 @@ const SEO = ({
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
+      <meta property="og:image:secure_url" content={seo.image} />
+      <meta property="og:image:alt" content={imageAlt || seo.title} />
+      {imageType && <meta property="og:image:type" content={imageType} />}
       <meta property="og:site_name" content={defaultTitle} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="fa_IR" />
@@ -86,7 +99,9 @@ const SEO = ({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={twitterUsername} />
       <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:url" content={seo.url} />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
